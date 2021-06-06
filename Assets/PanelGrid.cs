@@ -6,25 +6,33 @@ using UnityEngine.UI;
 
 public class PanelGrid: PanelGridElement
 {
-    private PanelGridElement[] gridElements;
+    private List<PanelGridElement> gridElements;
 
     private void Awake()
     {
-        gridElements = GetComponentsInChildren<PanelGridElement>();
+        gridElements = new List<PanelGridElement>();
+
+        foreach (Transform child in transform)
+        {
+            PanelGridElement element;
+            if(child.TryGetComponent(out element))
+            {
+                gridElements.Add(element);
+            }
+        }
     }
 
     
     public override void Activate()
     {
         gameObject.SetActive(true);
+
         foreach (var element in gridElements)
         {
             if(element != this) element.Activate();
         }
-        if (onActivate != null)
-        {
-            onActivate.Invoke();
-        }
+
+        base.Activate();
     }
 
     public override void Deactivate()
@@ -32,11 +40,11 @@ public class PanelGrid: PanelGridElement
         foreach (var element in gridElements)
         {
             if (element != this) element.Deactivate();
+            
         }
+
         gameObject.SetActive(false);
-        if (onDeactivate != null)
-        {
-            onDeactivate.Invoke();
-        }
+
+        base.Deactivate();
     }
 }

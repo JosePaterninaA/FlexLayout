@@ -7,7 +7,7 @@ public class TabGroup : MonoBehaviour
 {
     public List<TabButton> tabButtons;
     public TabButton selectedTab;
-    public PanelGroup panelGroup;
+    public PageGroup pageGroup;
 
     public Color idle;
     public Color selected;
@@ -21,15 +21,19 @@ public class TabGroup : MonoBehaviour
         }
 
         tabButtons.Add(button);
+
         if (button.selectedOnStart)
         {
-            OnTabSelected(button);
+            selectedTab = button;
         }
-        else
-        {
-            button.StartAnim();
-        }
+    }
 
+    public void InitializeSelected()
+    {
+        if(selectedTab!= null)
+        {
+            OnTabSelected(selectedTab);
+        }
     }
 
     public void OnTabEnter(TabButton button)
@@ -54,8 +58,8 @@ public class TabGroup : MonoBehaviour
         }
         selectedTab = button;
         selectedTab.Select();
-        panelGroup.currentPanelGridId = button.panelGridAttachedId;
-        panelGroup.ShowCurrentPanelGrid();
+        pageGroup.currentPanelGridId = button.panelGridAttachedId;
+        pageGroup.ShowCurrentPanelGrid();
         ResetTabs();
         button.background.color = selected;
     }

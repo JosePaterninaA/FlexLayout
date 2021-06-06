@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Tab System.unity
+- path: Assets/Scenes/Grid Layout System.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
