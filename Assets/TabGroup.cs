@@ -13,8 +13,6 @@ public class TabGroup : MonoBehaviour
     public Color selected;
     public Color enter;
     
-    private bool tabsSelected = false;
-
     public void Subscribe(TabButton button)
     {
         if(tabButtons == null)
@@ -23,7 +21,14 @@ public class TabGroup : MonoBehaviour
         }
 
         tabButtons.Add(button);
-        button.StartAnim();
+        if (button.selectedOnStart)
+        {
+            OnTabSelected(button);
+        }
+        else
+        {
+            button.StartAnim();
+        }
 
     }
 

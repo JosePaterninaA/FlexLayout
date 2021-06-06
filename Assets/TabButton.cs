@@ -6,17 +6,28 @@ using UnityEngine.UI;
 
 public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
+
+    public enum TabButtonAnimationType
+    {
+        MoveUp,
+        MoveRight
+    }
+
     public TabGroup tabGroup;
     public bool selectedOnStart = false;
     public Image background;
     public int panelGridAttachedId = 0;
     public float activationDelay = 0.1f;
     public bool selectable = false;
+    public float animationMovement = 20f;
+    public TabButtonAnimationType tabButtonAnimationType;
 
     [Header("Events")]
     public UnityEvent onTabSelected;
     public UnityEvent onTabDeselected;
     public UnityEvent onTabStarted;
+
+
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -55,6 +66,7 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         if (onTabSelected != null)
         {
+            selectable = false;
             onTabSelected.Invoke();
         }
     }
@@ -63,6 +75,7 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         if (onTabDeselected != null)
         {
+            selectable = true;
             onTabDeselected.Invoke();
         }
     }
@@ -81,13 +94,30 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public void SelectAnimation()
     {
-        LeanTween.moveLocalY(gameObject, 20f, 0.1f)
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveUp)
+        {
+            LeanTween.moveLocalY(gameObject, animationMovement, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
+        }
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveRight)
+        {
+            LeanTween.moveLocalX(gameObject, animationMovement, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+            Debug.Log("right");
+        }
 
     }
     public void DeselectAnimation()
     {
-        LeanTween.moveLocalY(gameObject, 0, 0.1f)
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveUp)
+        {
+            LeanTween.moveLocalY(gameObject, 0, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
+        }
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveRight)
+        {
+            LeanTween.moveLocalX(gameObject, 0, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+        }
     }
 }

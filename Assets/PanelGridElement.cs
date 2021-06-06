@@ -5,12 +5,12 @@ using UnityEngine.Events;
 
 public class PanelGridElement : MonoBehaviour
 {
+    public int id;
     public float activationDelay = 0.1f;
     public UnityEvent onActivate;
     public UnityEvent onDeactivate;
     public virtual void Activate()
     {
-        Debug.Log($"{gameObject.name} activated");
         transform.localScale = Vector3.zero;
         LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.2f).setDelay(activationDelay);
         if (onActivate != null)

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PanelGrid: PanelGridElement
 {
-    public int id;
     private PanelGridElement[] gridElements;
 
     private void Awake()

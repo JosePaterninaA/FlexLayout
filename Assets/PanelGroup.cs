@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PanelGroup : MonoBehaviour
 {
-    public PanelGrid[] panelGrids;
+    public PanelGridElement[] panelGrids;
     public int currentPanelGridId = 0;
 
     public void ShowCurrentPanelGrid()
