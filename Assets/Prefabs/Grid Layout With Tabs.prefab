@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 7860055374726647961}
   - component: {fileID: 7860055374726647959}
   - component: {fileID: 7860055374726647958}
-  - component: {fileID: 7860055374726647956}
+  - component: {fileID: 2773169847370706248}
   m_Layer: 5
   m_Name: GameObject
   m_TagString: Untagged
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055374726647956
+--- !u!114 &2773169847370706248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055374726647960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf5cc835666e364d9950c61079162c0, type: 3}
+  m_Script: {fileID: 11500000, guid: e666fd54c2dad9d4bbe1021f59128882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   onDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  activationDelay: 0.1
 --- !u!1 &7860055374806831352
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +353,7 @@ GameObject:
   - component: {fileID: 7860055374832762205}
   - component: {fileID: 7860055374832762200}
   - component: {fileID: 7860055374832762203}
-  - component: {fileID: 7860055374832762202}
+  - component: {fileID: 8340904090094406055}
   m_Layer: 5
   m_Name: Tab (2)
   m_TagString: Untagged
@@ -417,7 +418,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055374832762202
+--- !u!114 &8340904090094406055
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,9 +427,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055374832762204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375024522543}
   panelGridAttachedId: 2
@@ -440,9 +448,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 10
+  activationDelay: 0.1
 --- !u!1 &7860055374844423086
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +463,7 @@ GameObject:
   - component: {fileID: 7860055374844423085}
   - component: {fileID: 7860055374844423082}
   m_Layer: 5
-  m_Name: Page (3)
+  m_Name: Pager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +529,7 @@ GameObject:
   - component: {fileID: 7860055374860281541}
   - component: {fileID: 7860055374860281539}
   - component: {fileID: 7860055374860281538}
-  - component: {fileID: 7860055374860281536}
+  - component: {fileID: 7156983778743741352}
   m_Layer: 5
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -586,7 +594,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055374860281536
+--- !u!114 &7156983778743741352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -595,7 +603,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055374860281540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf5cc835666e364d9950c61079162c0, type: 3}
+  m_Script: {fileID: 11500000, guid: e666fd54c2dad9d4bbe1021f59128882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
@@ -605,6 +613,7 @@ MonoBehaviour:
   onDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  activationDelay: 0.5
 --- !u!1 &7860055375024522545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1080,7 @@ GameObject:
   - component: {fileID: 7860055375354966038}
   - component: {fileID: 7860055375354966037}
   - component: {fileID: 7860055375354966036}
-  - component: {fileID: 7860055375354966039}
+  - component: {fileID: 3764033644611411900}
   m_Layer: 5
   m_Name: Tab (2)
   m_TagString: Untagged
@@ -1136,7 +1145,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375354966039
+--- !u!114 &3764033644611411900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1145,12 +1154,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375354966041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 2
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055374806831350}
-  panelGridAttachedId: 2
+  panelGridAttachedId: 0
   selectable: 1
   selectedOnStart: 0
   onTabSelected:
@@ -1159,9 +1175,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 15
+  activationDelay: 0.1
 --- !u!1 &7860055375416735424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1189,7 @@ GameObject:
   - component: {fileID: 7860055375416735425}
   - component: {fileID: 7860055375416735484}
   - component: {fileID: 7860055375416735487}
-  - component: {fileID: 7860055375416735486}
+  - component: {fileID: 7900569754509137698}
   m_Layer: 5
   m_Name: Tab (4)
   m_TagString: Untagged
@@ -1238,7 +1254,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375416735486
+--- !u!114 &7900569754509137698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1247,12 +1263,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375416735424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 4
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055374806831350}
-  panelGridAttachedId: 4
+  panelGridAttachedId: 0
   selectable: 1
   selectedOnStart: 0
   onTabSelected:
@@ -1261,9 +1284,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 15
+  activationDelay: 0.1
 --- !u!1 &7860055375438681123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1398,7 @@ GameObject:
   - component: {fileID: 7860055375526266143}
   - component: {fileID: 7860055375526266138}
   - component: {fileID: 7860055375526266141}
-  - component: {fileID: 7860055375526266140}
+  - component: {fileID: 4600263384276783252}
   m_Layer: 5
   m_Name: Tab (3)
   m_TagString: Untagged
@@ -1440,7 +1463,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375526266140
+--- !u!114 &4600263384276783252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1449,12 +1472,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375526266142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 3
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055374806831350}
-  panelGridAttachedId: 3
+  panelGridAttachedId: 0
   selectable: 1
   selectedOnStart: 0
   onTabSelected:
@@ -1463,9 +1493,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 15
+  activationDelay: 0.1
 --- !u!1 &7860055375586576505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1601,7 @@ GameObject:
   - component: {fileID: 7860055375645170478}
   - component: {fileID: 7860055375645170477}
   - component: {fileID: 7860055375645170476}
-  - component: {fileID: 7860055375645170479}
+  - component: {fileID: 1590899229337967101}
   m_Layer: 5
   m_Name: Tab
   m_TagString: Untagged
@@ -1636,7 +1666,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375645170479
+--- !u!114 &1590899229337967101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1645,9 +1675,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375645170481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375024522543}
   panelGridAttachedId: 0
@@ -1659,9 +1696,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 10
+  activationDelay: 0.1
 --- !u!1 &7860055375720881504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,7 +1710,7 @@ GameObject:
   - component: {fileID: 7860055375720881505}
   - component: {fileID: 7860055375720881439}
   - component: {fileID: 7860055375720881438}
-  - component: {fileID: 7860055375720881436}
+  - component: {fileID: 1611141870681544588}
   m_Layer: 5
   m_Name: Tab (3)
   m_TagString: Untagged
@@ -1738,7 +1775,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375720881436
+--- !u!114 &1611141870681544588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1747,9 +1784,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375720881504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 3
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375888781166}
   panelGridAttachedId: 3
@@ -1761,9 +1805,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 0
+  animationMovement: 20
+  activationDelay: 0.1
 --- !u!1 &7860055375800913409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1775,7 +1819,7 @@ GameObject:
   - component: {fileID: 7860055375800913470}
   - component: {fileID: 7860055375800913468}
   - component: {fileID: 7860055375800913471}
-  - component: {fileID: 7860055375800913469}
+  - component: {fileID: 7841761935490676459}
   m_Layer: 5
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -1840,7 +1884,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055375800913469
+--- !u!114 &7841761935490676459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1849,7 +1893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055375800913409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf5cc835666e364d9950c61079162c0, type: 3}
+  m_Script: {fileID: 11500000, guid: e666fd54c2dad9d4bbe1021f59128882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
@@ -1859,6 +1903,7 @@ MonoBehaviour:
   onDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  activationDelay: 0.9
 --- !u!1 &7860055375888781168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2095,7 @@ GameObject:
   - component: {fileID: 7860055376009778121}
   - component: {fileID: 7860055376009778119}
   - component: {fileID: 7860055376009778118}
-  - component: {fileID: 7860055376009778116}
+  - component: {fileID: 34213972193250210}
   m_Layer: 5
   m_Name: Tab (1)
   m_TagString: Untagged
@@ -2115,7 +2160,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376009778116
+--- !u!114 &34213972193250210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2124,9 +2169,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376009778120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375888781166}
   panelGridAttachedId: 1
@@ -2138,9 +2190,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 0
+  animationMovement: 20
+  activationDelay: 0.1
 --- !u!1 &7860055376019836675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2298,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7860055376053936633}
   - component: {fileID: 7860055376053936631}
-  - component: {fileID: 7860055376053936630}
   - component: {fileID: 7860055376053936628}
   m_Layer: 5
   m_Name: Pager
@@ -2284,36 +2335,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7860055376053936632}
   m_CullTransparentMesh: 1
---- !u!114 &7860055376053936630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7860055376053936632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.504717, b: 0.7417318, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &7860055376053936628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,7 +2366,7 @@ GameObject:
   - component: {fileID: 7860055376100709387}
   - component: {fileID: 7860055376100709382}
   - component: {fileID: 7860055376100709385}
-  - component: {fileID: 7860055376100709384}
+  - component: {fileID: 6627646243570566198}
   m_Layer: 5
   m_Name: Tab (1)
   m_TagString: Untagged
@@ -2410,7 +2431,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376100709384
+--- !u!114 &6627646243570566198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2419,12 +2440,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376100709386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 1
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055374806831350}
-  panelGridAttachedId: 1
+  panelGridAttachedId: 0
   selectable: 1
   selectedOnStart: 0
   onTabSelected:
@@ -2433,9 +2461,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 15
+  activationDelay: 0.1
 --- !u!1 &7860055376105874582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,7 +2665,7 @@ GameObject:
   - component: {fileID: 7860055376227395923}
   - component: {fileID: 7860055376227395918}
   - component: {fileID: 7860055376227395921}
-  - component: {fileID: 7860055376227395920}
+  - component: {fileID: 7497898721048366492}
   m_Layer: 5
   m_Name: Tab (1)
   m_TagString: Untagged
@@ -2702,7 +2730,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376227395920
+--- !u!114 &7497898721048366492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2711,9 +2739,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376227395922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375024522543}
   panelGridAttachedId: 1
@@ -2725,9 +2760,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 10
+  activationDelay: 0.1
 --- !u!1 &7860055376244330614
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,7 +2869,7 @@ GameObject:
   - component: {fileID: 7860055376277425227}
   - component: {fileID: 7860055376277425225}
   - component: {fileID: 7860055376277425224}
-  - component: {fileID: 7860055376277425222}
+  - component: {fileID: 1905317780907173802}
   m_Layer: 5
   m_Name: Tab
   m_TagString: Untagged
@@ -2899,7 +2934,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376277425222
+--- !u!114 &1905317780907173802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2908,9 +2943,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376277425226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375888781166}
   panelGridAttachedId: 0
@@ -2922,9 +2964,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 0
+  animationMovement: 20
+  activationDelay: 0.1
 --- !u!1 &7860055376320829264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,6 +2979,7 @@ GameObject:
   - component: {fileID: 7860055376320829260}
   - component: {fileID: 7860055376320829263}
   - component: {fileID: 7860055376320829262}
+  - component: {fileID: 51180194810639967}
   m_Layer: 5
   m_Name: Page
   m_TagString: Untagged
@@ -3020,6 +3063,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &51180194810639967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860055376320829264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2262b4835c4b7440b41dc1d315d65de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7860055376384943918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,7 +3251,7 @@ GameObject:
   - component: {fileID: 7860055376469035960}
   - component: {fileID: 7860055376469035958}
   - component: {fileID: 7860055376469035961}
-  - component: {fileID: 7860055376469035959}
+  - component: {fileID: 4066601988014805030}
   m_Layer: 5
   m_Name: Tab (2)
   m_TagString: Untagged
@@ -3254,7 +3316,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376469035959
+--- !u!114 &4066601988014805030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3263,9 +3325,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376469035963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055375888781166}
   panelGridAttachedId: 2
@@ -3277,9 +3346,9 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 0
+  animationMovement: 20
+  activationDelay: 0.1
 --- !u!1 &7860055376564514073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3360,7 @@ GameObject:
   - component: {fileID: 7860055376564514070}
   - component: {fileID: 7860055376564514069}
   - component: {fileID: 7860055376564514068}
-  - component: {fileID: 7860055376564514071}
+  - component: {fileID: 666005430673279505}
   m_Layer: 5
   m_Name: Tab
   m_TagString: Untagged
@@ -3356,7 +3425,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7860055376564514071
+--- !u!114 &666005430673279505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3365,9 +3434,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860055376564514073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fdc4ae6a26ae864d986d95a0a321fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e937c99364e55843a03519a29f6d4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  onActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
   background: {fileID: 0}
   tabGroup: {fileID: 7860055374806831350}
   panelGridAttachedId: 0
@@ -3379,6 +3455,6 @@ MonoBehaviour:
   onTabDeselected:
     m_PersistentCalls:
       m_Calls: []
-  onTabStarted:
-    m_PersistentCalls:
-      m_Calls: []
+  tabButtonAnimationType: 1
+  animationMovement: 15
+  activationDelay: 0.1

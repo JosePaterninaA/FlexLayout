@@ -8,17 +8,29 @@ public class TabButtonAnimated : TabButton
     public enum TabButtonAnimationType
     {
         MoveUp,
-        MoveRight
+        MoveRight,
+        MoveDown,
+        MoveLeft
     }
     public TabButtonAnimationType tabButtonAnimationType;
     public float animationMovement = 20f;
     public float activationDelay = 0.1f;
-    public override void Start()
+    private RectTransform rectTransform;
+    //public override void Start()
+    //{
+    //    base.Start();
+    //    rectTransform = GetComponent<RectTransform>();
+    //    onTabSelected.AddListener(SelectAnimation);
+    //    onTabDeselected.AddListener(DeselectAnimation);
+    //    onActivate.AddListener(StartAnimation);
+    //}
+
+    private void Awake()
     {
-        base.Start();
+        rectTransform = GetComponent<RectTransform>();
         onTabSelected.AddListener(SelectAnimation);
         onTabDeselected.AddListener(DeselectAnimation);
-        onTabStarted.AddListener(StartAnimation);
+        onActivate.AddListener(StartAnimation);
     }
 
     public void StartAnimation()
@@ -37,27 +49,45 @@ public class TabButtonAnimated : TabButton
     {
         if (tabButtonAnimationType == TabButtonAnimationType.MoveUp)
         {
-            LeanTween.moveLocalY(gameObject, animationMovement, 0.1f)
+            LeanTween.moveY(gameObject, transform.position.y + animationMovement, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
         }
         if (tabButtonAnimationType == TabButtonAnimationType.MoveRight)
         {
-            LeanTween.moveLocalX(gameObject, animationMovement, 0.1f)
+            LeanTween.moveX(gameObject, transform.position.x + animationMovement, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
-            Debug.Log("right");
         }
-
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveDown)
+        {
+            LeanTween.moveY(gameObject, transform.position.y - animationMovement, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+        }
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveLeft)
+        {
+            LeanTween.moveX(gameObject, transform.position.x - animationMovement, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+        }
     }
     public void DeselectAnimation()
     {
         if (tabButtonAnimationType == TabButtonAnimationType.MoveUp)
         {
-            LeanTween.moveLocalY(gameObject, 0, 0.1f)
+            LeanTween.moveY(gameObject, transform.position.y - animationMovement, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
         }
         if (tabButtonAnimationType == TabButtonAnimationType.MoveRight)
         {
-            LeanTween.moveLocalX(gameObject, 0, 0.1f)
+            LeanTween.moveX(gameObject, transform.position.x - animationMovement, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+        }
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveDown)
+        {
+            LeanTween.moveY(gameObject, transform.position.y + animationMovement, 0.1f)
+            .setEase(LeanTweenType.easeInOutBack);
+        }
+        if (tabButtonAnimationType == TabButtonAnimationType.MoveLeft)
+        {
+            LeanTween.moveX(gameObject, transform.position.x + animationMovement, 0.1f)
             .setEase(LeanTweenType.easeInOutBack);
         }
     }

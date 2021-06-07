@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
+public class TabButton : PanelGridElement, IPointerEnterHandler, IPointerClickHandler, IPointerExitHandler
 {
 
 
@@ -17,7 +17,6 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     [Header("Events")]
     public UnityEvent onTabSelected;
     public UnityEvent onTabDeselected;
-    public UnityEvent onTabStarted;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -39,14 +38,6 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         background = GetComponent<Image>();
         tabGroup.Subscribe(this);
-    }
-
-    public void StartAnim()
-    {
-        if (onTabStarted != null)
-        {
-            onTabStarted.Invoke();
-        }
     }
 
     public void Select()

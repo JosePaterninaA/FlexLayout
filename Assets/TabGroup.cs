@@ -52,10 +52,16 @@ public class TabGroup : MonoBehaviour
 
     public void OnTabSelected(TabButton button)
     {
-        if(selectedTab!= null)
+        if(selectedTab!= null && !selectedTab.selectedOnStart)
         {
             selectedTab.Deselect();
         }
+
+        if (selectedTab != null &&  selectedTab.selectedOnStart)
+        {
+            selectedTab.selectedOnStart = false;
+        }
+
         selectedTab = button;
         selectedTab.Select();
         pageGroup.currentPanelGridId = button.panelGridAttachedId;
@@ -70,6 +76,7 @@ public class TabGroup : MonoBehaviour
         {
             if (button != null && button == selectedTab) { continue; }
             button.background.color = idle;
+
         }
     }
 }

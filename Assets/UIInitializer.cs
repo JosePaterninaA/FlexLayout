@@ -8,7 +8,13 @@ public class UIInitializer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainPager.Activate();
+        StartCoroutine(Initialize());
     }
 
+    public IEnumerator Initialize()
+    {
+        yield return new WaitForSeconds(0.1f);
+        mainPager.Activate();
+
+    }
 }
