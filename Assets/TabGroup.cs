@@ -7,11 +7,14 @@ public class TabGroup : MonoBehaviour
 {
     public List<TabButton> tabButtons;
     public TabButton selectedTab;
+    public TabButton selectedOnStart;
     public PageGroup pageGroup;
 
     public Color idle;
     public Color selected;
     public Color enter;
+
+    private bool initialized = false;
     
     public void Subscribe(TabButton button)
     {
@@ -24,16 +27,26 @@ public class TabGroup : MonoBehaviour
 
         if (button.selectedOnStart)
         {
+            selectedOnStart = button;
             selectedTab = button;
         }
     }
 
     public void InitializeSelected()
     {
-        if(selectedTab!= null)
+        if (selectedOnStart != null)
         {
-            OnTabSelected(selectedTab);
+            StartCoroutine(InitializeWithDelay(selectedOnStart));
+            return;
         }
+        //OnTabSelected(selectedOnStart);
+
+    }
+
+    private IEnumerator InitializeWithDelay(TabButton button)
+    {
+        yield return new WaitForSeconds(0.001f);
+        OnTabSelected(button);
     }
 
     public void OnTabEnter(TabButton button)
@@ -52,14 +65,14 @@ public class TabGroup : MonoBehaviour
 
     public void OnTabSelected(TabButton button)
     {
-        if(selectedTab!= null && !selectedTab.selectedOnStart)
+        if(selectedTab!= null  && initialized)
         {
             selectedTab.Deselect();
         }
 
         if (selectedTab != null &&  selectedTab.selectedOnStart)
         {
-            selectedTab.selectedOnStart = false;
+            initialized = true;
         }
 
         selectedTab = button;

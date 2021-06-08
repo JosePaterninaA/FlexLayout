@@ -18,7 +18,6 @@ public class PanelPager : PanelGridElement
     public override void Deactivate()
     {
         gameObject.SetActive(false);
-
         base.Deactivate();
     }
 }

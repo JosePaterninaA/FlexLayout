@@ -15,6 +15,7 @@ public class PanelGridElement : MonoBehaviour
     {
         if (onActivate != null)
         {
+            Debug.Log(gameObject.name + " activated");
             onActivate.Invoke();
         }
     }
@@ -23,6 +24,7 @@ public class PanelGridElement : MonoBehaviour
     {
         if (onDeactivate != null)
         {
+            Debug.Log(gameObject.name + " deactivated");
             onDeactivate.Invoke();
         }
     }
